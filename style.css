@@ -20,6 +20,11 @@
     opacity:0.9;
     cursor:pointer;
 }
+.zoom:hover {
+    -ms-transform: scale(1.02); /* IE 9 */
+    -webkit-transform: scale(1.02); /* Safari 3-8 */
+    transform: scale(1.02); 
+}
 
 /* Body */
 body{
@@ -504,6 +509,7 @@ header{
     border-radius: 10px;
     height:200px;
     position: relative;
+    transition:0.3s;
 }
 .story-avatar-box{
     width:35px;
@@ -613,6 +619,7 @@ header{
     padding-bottom:12px;
     margin-bottom:10px;
     margin-right:15px;
+    transition: 0.3s;
 }
 .people-card img{
     border-radius: 10px 10px 0px 0px;
@@ -660,7 +667,6 @@ header{
     margin-right:2px;
 }
 
-
 .people-know-box button{
     color:#1877f2;
     font-weight:600;
@@ -672,6 +678,7 @@ header{
     transition: 0.3s;
     border-radius: 10px;
     margin-bottom:10px;
+    cursor: pointer;
 }
 .people-know-box button:hover{
     background-color: rgb(236, 236, 236);
@@ -856,6 +863,14 @@ header{
 .comment-button-box .img5{
     object-position: 50% -608px;
 }
+
+
+
+
+
+
+
+
 
 
 
