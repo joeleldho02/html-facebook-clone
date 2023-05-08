@@ -345,6 +345,7 @@ header{
     padding:5px 3px 0px 3px;
     height:40vh;
     justify-content: space-between;
+    overflow: hidden;
 }
 .shortcut-item{
     display:flex;
@@ -354,9 +355,10 @@ header{
 .shortcut-item .shortcut-img-box{
     width:35px;
     height:35px;
+    border-radius: 50%;
+    overflow: hidden;
 }
 .shortcut-item .shortcut-img{
-    border-radius: 100%;
     width:100%
 }
 .shortcut-item h4{
@@ -426,7 +428,7 @@ header{
 
 /* Stories */
 .stories-box{
-    padding: 4px 0px;
+    padding: 0px 0px;
 }
 .stories-tab-box{
     width: 95%;
@@ -496,11 +498,12 @@ header{
 
 /* Stories Horizontal Scroll Row */
 .stories-row-box{
-    margin:10px 0px 10px 0px;
+    margin:10px 0px 20px 0px;
     justify-content: flex-start; 
     width: 690px;
     overflow: scroll;
     overflow-y: hidden;
+    padding:10px;
 }
 .story-card{
     margin: 0px 10px;
@@ -525,15 +528,23 @@ header{
     width:100%;
     border-radius:50%;
 }
-.story-img-box img{
-    width:100%;
+.story-img-box{
+    background-color: #1b4c8b;
+    overflow:hidden;
     border-radius: 10px;
+    height: 100%;
+} 
+.story-img-box img{
+    width:150%;
+    border-radius: 10px;
+    object-position: 10px -5px;
 }
 .storytext-box{
     position: absolute;
     bottom:10px;
     left:10px;
     width:100px;
+    z-index:3;
 }
 .storytext-box p{
     color:white;
@@ -543,6 +554,42 @@ header{
     white-space: nowrap;
     overflow: hidden;
 }
+.storytext-box .p1{
+    color:black;
+    margin-left:10px;
+}
+.story-create-box .p2{
+    font-size:28px;
+    color:white;
+    font-weight:500;
+    margin-bottom:6px;
+    
+}
+.story-create-box{
+    position: absolute;
+    bottom:40px;
+    left:35px;
+    width:100px;
+    border:3px solid white;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    background-color: #1876f2;
+    align-items: center;
+    z-index:2;
+}
+.create-story {
+    background-color: white;
+}
+.story-text-bg-box{
+    position: absolute;
+    bottom:0px;
+    width: 100%;
+    height: 60px;
+    background-color: white;
+    z-index:1;
+}
+
 
 
 /* Post Content */
@@ -623,7 +670,15 @@ header{
 }
 .people-card img{
     border-radius: 10px 10px 0px 0px;
+    transition: 0.3s;
+    cursor:pointer;
+    width:110%;
+    
 }
+.people-card img:hover{
+    transform: scale(1.02);
+}
+
 .people-card h3{
     font-size:18px;
     font-weight:500;
@@ -763,7 +818,9 @@ header{
 .like-info-section p:hover{
     text-decoration: underline;
 }
-.post-1-box hr{
+.post-1-box hr,
+.post-2-box hr,
+.post-3-box hr{
     width:95%;
 }
 .react-button{
@@ -864,12 +921,37 @@ header{
     object-position: 50% -608px;
 }
 
+/* Post 2 */
+.post-2-box .title-section img{
+    border:3px solid white;
+    margin:auto;
+    margin-bottom:-4px;
+}
+.avatar-img-box{
+    border-radius: 100%;
+    border:3px solid #1b74e4;
+    height: max-content;
+}
+.like-info-section .img-2{
+    border: 2px solid white;
+    border-radius: 100%;
+    margin-left:-10px;
+}
 
-
-
-
-
-
+/* Post 3 */
+.post-3-box .react-button .img1{
+    object-position: 50% -247px;
+    filter:invert(36%) sepia(95%) 
+        saturate(931%) hue-rotate(185deg) 
+        brightness(96%) contrast(97%);
+}
+.post-3-box .p1{
+    color: #1b74e4;;
+}
+.post-comment{
+    padding: 15px;
+    padding-bottom: 2px;;
+}
 
 
 
@@ -917,9 +999,10 @@ header{
 .right-side-item .right-side-box{
     width:35px;
     height:35px;
+    border-radius: 50%;
+    overflow: hidden;
 }
 .right-side-item .right-side-img{
-    border-radius: 100%;
     width:100%
 }
 .right-side-item h4{
@@ -1015,6 +1098,11 @@ header{
     border:none;
     box-shadow:4px 3px 4px rgba(0,0,0,0.1);
     text-align: center;
+    transition:0.3s;
+    cursor: pointer;
+}
+.float-btn:hover{
+    background-color: rgb(221, 220, 220);
 }
 .float-btn i{
     font-size:20px;
@@ -1033,9 +1121,10 @@ header{
 .contact-item .contact-pic-box{
     width:38px;
     height:38px;
+    border-radius: 50%;
+    overflow: hidden;
 }
 .contact-item .contact-img{
-    border-radius: 100%;
     width:100%;
 }
 .contact-item h4{
