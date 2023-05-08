@@ -229,6 +229,21 @@ header{
 .profile-icons button:hover{
     background-color: #c9cbcd;
 }
+.notification-icon-box{
+    position: relative;
+}
+.notification-icon-box p{
+    position: absolute;
+    right:0px;
+    top:-5px;
+    border-radius: 100%;
+    font-size: 12px;
+    font-weight: 500;
+    color: white;
+    background-color: red;
+    padding: 0px 5px 1px 5px;
+}
+
 /* ------------ ------------ */
 
 /* Main Body */
